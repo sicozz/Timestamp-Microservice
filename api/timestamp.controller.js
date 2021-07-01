@@ -6,7 +6,7 @@ export default class TimeCtrl {
     const timestamp = TimeFuncs.convert(dateString);
 
     if (timestamp.error) {
-      res.status(400).json(date);
+      res.status(400).json(timestamp);
     } else {
       res.json(timestamp);
     }
