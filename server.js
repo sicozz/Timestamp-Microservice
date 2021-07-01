@@ -8,9 +8,9 @@ const port = process.env.PORT || 8000;
 const app = express();
 
 app.use(cors({optionsSuccessStatus: 200}));
+app.use(express.static('public'));
 app.use(express.json());
 
-app.use(express.static('public'));
 app.get("/", function (req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 });
